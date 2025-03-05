@@ -1,4 +1,3 @@
-```
 def pertence_fibonacci(n) :
     a, b = 0, 1
 
@@ -6,9 +5,23 @@ def pertence_fibonacci(n) :
         a, b = b, a + b
         return b == n or n == 0
 
-num = int(input("Digite um número para verificar se está funcionando na sequência de Fibonacci: "))
-if pertence_fibonoacci(num) :
-print(f"O número {num} pertence a sequência Fibonacci.") 
-else:
-    print(f"O número {num} não pertence a sequência Fibonacci.")
-```   
+def main():
+    try:
+        num = int(input("Digite um número para verificar se está na sequência de Fibonacci: "))
+        if pertence_fibonacci(num):
+            print(f"O número {num} pertence à sequência de Fibonacci.")
+        else:
+            print(f"O número {num} não pertence à sequência de Fibonacci.")
+    except ValueError:
+        print("Erro: Digite um número inteiro válido.")
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
